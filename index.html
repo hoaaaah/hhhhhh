@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Diễu Binh Quốc Khánh 2/9</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: linear-gradient(to top, #a00000, #ff0000);
+      overflow-x: hidden;
+      font-family: 'Arial', sans-serif;
+      position: relative;
+      height: 100vh;
+    }
+
+    h1 {
+      text-align: center;
+      color: #FFD700;
+      margin-top: 20px;
+      font-size: 36px;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .road {
+      position: absolute;
+      bottom: 100px;
+      width: 100%;
+      height: 200px;
+      background: #444;
+      border-top: 5px solid #888;
+      overflow: hidden;
+    }
+
+    .parade {
+      display: flex;
+      position: absolute;
+      bottom: 120px;
+      animation: moveRight 15s linear infinite;
+    }
+
+    .soldier, .tank {
+      width: 100px;
+      margin: 0 20px;
+    }
+
+    .soldier img, .tank img {
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(2px 2px 4px black);
+    }
+
+    @keyframes moveRight {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+
+    .flag {
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      animation: wave 2s infinite ease-in-out;
+    }
+
+    @keyframes wave {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(2deg); }
+      50% { transform: rotate(-2deg); }
+      75% { transform: rotate(2deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    .crowd {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+      background: transparent;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+    }
+
+    .crowd img {
+      height: 100px;
+      filter: brightness(110%) drop-shadow(1px 1px 3px black);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🇻🇳 Diễu Binh Mừng Quốc Khánh 2/9 🇻🇳</h1>
+
+  <!-- Cờ -->
+  <img class="flag" src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg" alt="Cờ Việt Nam">
+
+  <!-- Người dân đứng xem -->
+  <div class="crowd">
+    <img src="https://i.imgur.com/Xr1pY5O.png" alt="Người dân 1">
+    <img src="https://i.imgur.com/U8Zn6n4.png" alt="Người dân 2">
+    <img src="https://i.imgur.com/Xr1pY5O.png" alt="Người dân 3">
+    <img src="https://i.imgur.com/U8Zn6n4.png" alt="Người dân 4">
+  </div>
+
+  <!-- Đường diễu binh -->
+  <div class="road">
+    <div class="parade">
+      <div class="soldier">
+        <img src="https://i.imgur.com/sU9nUie.png" alt="Bộ đội 1">
+      </div>
+      <div class="soldier">
+        <img src="https://i.imgur.com/sU9nUie.png" alt="Bộ đội 2">
+      </div>
+      <div class="tank">
+        <img src="https://i.imgur.com/3HJfi5J.png" alt="Xe tăng">
+      </div>
+      <div class="soldier">
+        <img src="https://i.imgur.com/sU9nUie.png" alt="Bộ đội 3">
+      </div>
+      <div class="tank">
+        <img src="https://i.imgur.com/3HJfi5J.png" alt="Xe tăng 2">
+      </div>
+    </div>
+  </div>
+
+  <!-- Chữ chân trang -->
+  <footer>
+    &copy; 2025 – Tổ quốc là niềm tự hào của chúng ta!
+  </footer>
+
+</body>
+</html>
